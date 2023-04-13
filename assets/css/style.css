@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* CSS common */
+
+:root{
+  --dis-top: flex;
+  --just-text: space-between;
+  --wrap-text: wrap;
+  --mar-top: 5%;
+  --sha-text: 0 0 10px #2d8fda, 0 0 20px #2d8fda, 0 0 40px #2d8fda;
+  --wit-mid: 80%;
+  --space-mar: auto;
+  --ali-text: center;
+  --pad-top: 100px;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+}
+
+.para{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Begin CSS loader */
+#preloader{
+    position: fixed;
+    z-index: 9999;
+    background: #000 url(/assets/css/img/genshinloader.gif) no-repeat center center;
+    height: 100%;
+    width: 100%;
+    background-size: 50%;
+}
+/* End CSS loader */
+
+/* Begin CSS header */
+
+#header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,1),rgba(4,9,30,0));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#bg-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+#bg-header .bgfirst{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#headerbar{
+    display: flex;
+    align-items: center;
+    padding: 1% 10%;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.nav-menu{
+    flex: 1;
+    text-align: right;
+    display: inline-block;
+    list-style-type: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-menu li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-menu li a:hover,
+#headerbar .fa-solid:hover{
+    text-shadow: 0 0 10px #2d8fda, 0 0 20px #2d8fda, 0 0 40px #2d8fda;
+}
+
+.nav-menu li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #2d8fda;
+    display: block;
+    margin: auto;
+}
+
+.nav-menu li:hover:after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+#bg-content{
+    text-align: center;
+    width: 90%;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#bg-content h1{
+    font-size: 80px;
+    line-height: 60px;
+    margin: 25px 0;
+    text-shadow: var(--sha-text);
+}
+
+#bg-content p{
+    margin: 10px 0 40px;
+    text-shadow: var(--sha-text);
+    font-size: 35px;
+}
+
+#headerbar .fa-solid{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* End CSS header */
+
+/* Begin CSS mid */
+#bgmid{
+    width: var(--wit-mid);
+    margin: var(--space-mar);
+    text-align: var(--ali-text);
+    padding-top: var(--pad-top);
+} 
+
+.char-content{
+    margin-top: var(--mar-top);
+    display: var(--dis-top);
+    justify-content: var(--just-text);
+    flex-wrap: var(--wrap-text);
+}
+
+.mid-content{
+    flex-basis: 17%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.mid-content img{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer img{
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 50%;
+}
+
+.layer:hover img{
+    bottom: 0;
+    opacity: 1;
+}
+/* End CSS mid */
+
+/* Begin CSS weapons */
+#wea-detail,
+#arti-detail{
+    width: var(--wit-mid);
+    margin: var(--space-mar);
+    text-align: var(--ali-text);
+    padding-top: var(--pad-top);
+}
+
+#wea-detail .space-detail,
+#arti-detail .space-detail{
+    margin-top: var(--mar-top);
+}
+
+.wea-title.mar-title{
+    margin-bottom: 50px;
+}
+
+.wea-title h3{
+    text-align: left;
+}
+
+.wea-content{
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+
+.wea-item{
+    display: flex;
+    gap: 46px;
+    background-color: #9d9d9d;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.wea-sub{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    display: grid;
+    height: 100%;
+    width: 120px;
+    border-radius: 15px;
+}
+
+.wea-img{
+    background: url(/assets/css/img/bg5star.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+
+.img-sub{
+    width: 120px;
+    height: 120px;
+}
+
+.img-sub:hover{
+    transform: scale(1.1);
+}
+
+.span-sub{
+    background-color: rgba(26, 29, 39, 0.9);
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 13px;
+    padding: 0px 10px;
+}
+
+/* End CSS weapons */
+
+/* Begin CSS artifacts */
+
+/* End CSS artifacts */
+
+/* Begin CSS footer */
+#footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+#footer h3{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icon-footer .fa-brands{
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 30px;
+}
+
+.icon-footer .fa-brands:hover{
+    color: #f44336;
+}
+/* End CSS footer */
