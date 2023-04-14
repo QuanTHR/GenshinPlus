@@ -28,7 +28,7 @@ html{
 #preloader{
     position: fixed;
     z-index: 9999;
-    background: #000 url(/assets/css/img/genshinloader.gif) no-repeat center center;
+    background: #000 url(img/genshinloader.gif) no-repeat center center;
     height: 100%;
     width: 100%;
     background-size: 50%;

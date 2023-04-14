@@ -28,7 +28,7 @@ html{
 #preloader{
     position: fixed;
     z-index: 9999;
-    background: #000 url(/assets/css/img/genshinloader.gif) no-repeat center center;
+    background: #000 url(img/genshinloader.gif) no-repeat center center;
     height: 100%;
     width: 100%;
     background-size: 50%;
@@ -56,7 +56,7 @@ html{
     height: 100vh;
     width: 100%;
     z-index: -1;
-    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,1)), url(/assets/css/img/bgteam.jpg) no-repeat center;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,1)), url(img/bgteam.jpg) no-repeat center;
     object-fit: cover;
 }
 
